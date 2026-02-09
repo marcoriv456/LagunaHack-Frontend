@@ -1,5 +1,6 @@
 section {
   display: flex;
+  align-items: center;
   justify-content: center;
   height: 100lvh;
   width: 100%;
@@ -18,17 +19,34 @@ h3 {
   text-align: center;
 }
 
+p {
+  max-width: 50rem;
+}
+
 figure {
   display: block;
   width: 94rem;
+  display: grid;
+  place-items: center;
 }
 
 hack-gallery {
   width: 85rem;
 }
 
+section:not(.intersected) :is(p, h3, hack-gallery) {
+  translate: 0 -20%;
+  opacity: 0;
+}
+
+p,
+h3,
+hack-gallery {
+  transition-property: translate, opacity;
+  transition: var(--trans-duration) var(--trans-easing);
+}
+
 .swiper-slide {
-  width: fit-content;
   display: grid;
   place-items: center;
 }
