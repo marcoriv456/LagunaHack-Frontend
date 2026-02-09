@@ -7,7 +7,7 @@ import {
   OnDestroy,
 } from '@angular/core';
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Mousewheel, Pagination } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types';
 
 @Component({
@@ -26,7 +26,7 @@ export class Gallery implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.swiper = new Swiper(`#${this.id}`, {
-      modules: [Pagination],
+      modules: [Pagination, Mousewheel, Autoplay],
       pagination: {
         el: `.swiper-pagination`,
         clickable: true,

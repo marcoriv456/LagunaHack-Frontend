@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Campus } from '../../../core/domain/model/campus';
 import { Project } from '../../../core/domain/model/project';
 import { Button } from '../../atoms/button/button';
@@ -15,13 +15,9 @@ import { ProjectCard } from '../../molecules/project-card/project-card';
   templateUrl: './project-bank.page.html',
   styleUrl: './project-bank.page.css',
 })
-export class ProjectBankPage implements AfterViewInit {
+export class ProjectBankPage {
   protected _projects: Project[] = [project1, project2, project1, project2];
   @ViewChild(Gallery) protected _gallery!: Gallery;
-
-  ngAfterViewInit(): void {
-    this._gallery.manualInit();
-  }
 }
 
 const project1 = new Project();
