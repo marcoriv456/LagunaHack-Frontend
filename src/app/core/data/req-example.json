@@ -1,0 +1,22 @@
+{
+  "nombre": "Equipo Tucanes",
+  "categoria": "Salud",
+  "integrantes": [
+    {
+      "nombre": "Esteban Ramirez Flores",
+      "semestre": 2,
+      "numero_control": "236w0456",
+      "carrera": "ISC",
+      "campus": "Tequila",
+      "correo": "236w0456@zongolica.tecnm.mx"
+    },
+    {
+      "nombre": "Jose Muñoz Flores",
+      "semestre": 4,
+      "numero_control": "226w0456",
+      "carrera": "ISC",
+      "campus": "Tehuipango",
+      "correo": "226w0456@zongolica.tecnm.mx"
+    }
+  ]
+}
