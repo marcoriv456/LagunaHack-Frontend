@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { Countdown } from './ui/organisms/countdown/countdown';
 import { Header } from './ui/organisms/header/header';
 import { Waves } from './ui/organisms/waves/waves';
 import { ConvocationPage } from './ui/pages/convocation/convocation.page';
@@ -9,7 +10,16 @@ import { SponsorsPage } from './ui/pages/sponsors/sponsors.page';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Waves, HomePage, ConvocationPage, ProjectBankPage, RegisterPage, SponsorsPage],
+  imports: [
+    Header,
+    Waves,
+    HomePage,
+    ConvocationPage,
+    ProjectBankPage,
+    RegisterPage,
+    SponsorsPage,
+    Countdown,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
