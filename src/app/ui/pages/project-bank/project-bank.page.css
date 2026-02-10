@@ -25,6 +25,8 @@ section:not(.intersected) > * {
 hack-panel {
   margin-top: 1rem;
   width: 100%;
+  position: relative;
+  height: 30rem;
 }
 
 hack-gallery {

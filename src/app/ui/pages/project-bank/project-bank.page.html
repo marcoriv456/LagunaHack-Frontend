@@ -10,12 +10,13 @@
 
   <hack-button icon="team" mode="dark">Registro</hack-button>
   <hack-panel>
-    <hack-gallery [options]="{slidesPerView:2, centeredSlides:true}">
-      @for (project of _projects; track $index) {
-        <div class="swiper-slide">
-          <hack-project-card [Project]="project" />
-        </div>
-      }
-    </hack-gallery>
+    <hack-dev-advice></hack-dev-advice>
+    <!-- <hack-gallery [options]="{slidesPerView:2, centeredSlides:true}"> -->
+    <!--   @for (project of _projects; track $index) { -->
+    <!--     <div class="swiper-slide"> -->
+    <!--       <hack-project-card [Project]="project" /> -->
+    <!--     </div> -->
+    <!--   } -->
+    <!-- </hack-gallery> -->
   </hack-panel>
 </section>
