@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Page } from '../../../core/abstract/page.abstract';
 import { Button } from '../../atoms/button/button';
 import { Icon } from '../../atoms/icon/icon';
 import { Subtitle } from '../../atoms/subtitle/subtitle';
@@ -12,4 +13,7 @@ import { Intersectable } from '../../directives/intersectable/intersectable';
   templateUrl: './convocation.page.html',
   styleUrl: './convocation.page.css',
 })
-export class ConvocationPage { }
+export class ConvocationPage extends Page {
+  name = 'convocation'
+}
+;

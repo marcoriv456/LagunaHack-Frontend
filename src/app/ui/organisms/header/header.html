@@ -1,22 +1,22 @@
 <header>
   <ul>
     <li>
-      <hack-button icon="home" mode="transparent">Inicio</hack-button>
+      <hack-button icon="home" [mode]="GetMode('home')">Inicio</hack-button>
     </li>
     <li>
-      <hack-button icon="speaker" mode="transparent">Convocatoria</hack-button>
+      <hack-button icon="speaker" [mode]="GetMode('convocation')">Convocatoria</hack-button>
     </li>
     <li>
-      <hack-button icon="light-bulb" mode="transparent">Banco Proyectos</hack-button>
+      <hack-button icon="light-bulb" [mode]="GetMode('project-bank')">Banco Proyectos</hack-button>
     </li>
     <li>
-      <hack-button icon="team" mode="transparent">Registro</hack-button>
+      <hack-button icon="team" [mode]="GetMode('registration')">Registro</hack-button>
     </li>
     <li>
-      <hack-button icon="star" mode="transparent">Patrocinadores</hack-button>
+      <hack-button icon="star" [mode]="GetMode('sponsors')">Patrocinadores</hack-button>
     </li>
     <li>
-      <hack-button icon="institution" mode="transparent">Comite</hack-button>
+      <hack-button icon="institution" [mode]="GetMode('comitee')">Comite</hack-button>
     </li>
   </ul>
 </header>

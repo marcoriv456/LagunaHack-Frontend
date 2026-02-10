@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Page } from '../../../core/abstract/page.abstract';
 import { Button } from '../../atoms/button/button';
 import { LabeledSubtitle } from '../../atoms/labeled-subtitle/labeled-subtitle';
 import { Panel } from '../../atoms/panel/panel';
@@ -13,4 +14,6 @@ import { TeamInfoForm } from './ui/organisms/team-info-form/team-info-form';
   templateUrl: './register.page.html',
   styleUrl: './register.page.css',
 })
-export class RegisterPage { }
+export class RegisterPage extends Page {
+  name = 'registration';
+}

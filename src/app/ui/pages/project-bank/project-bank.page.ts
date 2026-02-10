@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { Page } from '../../../core/abstract/page.abstract';
 import { Campus } from '../../../core/domain/model/campus';
 import { Project } from '../../../core/domain/model/project';
 import { Button } from '../../atoms/button/button';
@@ -15,7 +16,8 @@ import { ProjectCard } from '../../molecules/project-card/project-card';
   templateUrl: './project-bank.page.html',
   styleUrl: './project-bank.page.css',
 })
-export class ProjectBankPage {
+export class ProjectBankPage extends Page {
+  name = 'project-bank';
   protected _projects: Project[] = [project1, project2, project1, project2];
   @ViewChild(Gallery) protected _gallery!: Gallery;
 }

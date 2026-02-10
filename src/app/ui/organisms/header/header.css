@@ -20,3 +20,7 @@ ul {
 hack-button {
   --btn-color: var(--white);
 }
+
+hack-button[mode='clear'] {
+  --btn-color: var(--main);
+}
