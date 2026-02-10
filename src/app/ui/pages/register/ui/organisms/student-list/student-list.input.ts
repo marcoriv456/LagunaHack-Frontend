@@ -52,6 +52,13 @@ export class StudentListInput implements ControlValueAccessor {
     this._gallery.goLast();
   }
 
+  protected RemoveStudent(student: Student) {
+    this._students.delete(student);
+    this.onChange(this._students);
+    this._cdr.detectChanges();
+    this._gallery.refresh();
+  }
+
   protected get StudentList() {
     return Array.from(this._students.values());
   }

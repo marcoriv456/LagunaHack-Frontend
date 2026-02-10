@@ -46,7 +46,7 @@ hack-icon {
   display: var(--btn-display-icon);
 }
 
-hack-text {
+hack-bold {
   display: var(--btn-display-label);
   text-align: inherit;
 }

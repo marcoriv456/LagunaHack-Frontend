@@ -9,8 +9,18 @@ hack-panel {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  position: relative;
 }
-
+.close-btn {
+  --btn-color: var(--opaque);
+  --btn-display-label: none;
+  --btn-padding: 0;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
 hack-labeled-text {
   color: var(--opaque);
   align-self: center;

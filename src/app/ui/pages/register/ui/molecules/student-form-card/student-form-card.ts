@@ -4,6 +4,7 @@ import { Campus } from '../../../../../../core/domain/model/campus';
 import { Career } from '../../../../../../core/domain/model/career';
 import { Student } from '../../../../../../core/domain/model/student';
 import { IconedLabeledValue, LabeledValue } from '../../../../../../core/utilities/labeled-value';
+import { Button } from '../../../../../atoms/button/button';
 import { LabeledText } from '../../../../../atoms/labeled-text/labeled-text';
 import { Panel } from '../../../../../atoms/panel/panel';
 import { Select } from '../../../../../atoms/select/select';
@@ -12,13 +13,14 @@ import { InputLabel } from '../../../../../molecules/input-label/input-label';
 
 @Component({
   selector: 'hack-student-form-card',
-  imports: [Panel, LabeledText, InputLabel, Select, TextInput, FormsModule],
+  imports: [Panel, LabeledText, InputLabel, Select, TextInput, FormsModule, Button],
   templateUrl: './student-form-card.html',
   styleUrl: './student-form-card.css',
 })
 export class StudentFormCard {
   @Input({ required: true }) Student!: Student;
   @Output() Change = new EventEmitter<Student>();
+  @Output() Remove = new EventEmitter<void>();
 
   protected readonly _semesterOptions: IconedLabeledValue<number, 'calendar'>[] = [
     { icon: 'calendar', label: 'Semestre', value: -1 },
