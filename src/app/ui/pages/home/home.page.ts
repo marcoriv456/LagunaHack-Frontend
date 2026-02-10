@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, inject, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { Page } from '../../../core/abstract/page.abstract';
 import { HomeIntersectionEvent } from '../../../core/events/home-intersection.event';
 import { Button } from '../../atoms/button/button';
@@ -13,7 +13,6 @@ import { Intersectable } from '../../directives/intersectable/intersectable';
 })
 export class HomePage extends Page implements AfterViewInit, OnDestroy {
   name = 'home';
-  private readonly _ref: ElementRef<HTMLElement> = inject(ElementRef);
   private _intersectionObserver!: IntersectionObserver;
 
   ngAfterViewInit(): void {

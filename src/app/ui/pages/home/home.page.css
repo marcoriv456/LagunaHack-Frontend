@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   height: calc(100vh - 5.75rem);
-  z-index: 20;
+  z-index: 30;
 }
 
 section {
@@ -21,7 +21,7 @@ img {
   width: 30rem;
 }
 
-img,
+figure,
 hack-text,
 nav {
   transition-property: translate, opacity;
@@ -36,9 +36,14 @@ nav {
   transition-delay: 0.2s;
 }
 
-section:not(.intersected) :is(img, hack-text, nav) {
+section:not(.intersected) :is(figure, hack-text, nav) {
   translate: 0 -20%;
   opacity: 0;
+  pointer-events: none;
+}
+
+:host:has(section:not(.intersected)) {
+  pointer-events: none;
 }
 
 p {

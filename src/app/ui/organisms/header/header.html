@@ -1,22 +1,43 @@
 <header>
   <ul>
     <li>
-      <hack-button icon="home" [mode]="GetMode('home')">Inicio</hack-button>
+      <hack-button icon="home" [mode]="GetMode('home')" (Click)="RequestPage('home')"
+        >Inicio</hack-button
+      >
     </li>
     <li>
-      <hack-button icon="speaker" [mode]="GetMode('convocation')">Convocatoria</hack-button>
+      <hack-button
+        icon="speaker"
+        [mode]="GetMode('convocation')"
+        (Click)="RequestPage('convocation')"
+        >Convocatoria</hack-button
+      >
     </li>
     <li>
-      <hack-button icon="light-bulb" [mode]="GetMode('project-bank')">Banco Proyectos</hack-button>
+      <hack-button
+        icon="light-bulb"
+        [mode]="GetMode('project-bank')"
+        (Click)="RequestPage('project-bank')"
+        >Banco Proyectos</hack-button
+      >
     </li>
     <li>
-      <hack-button icon="team" [mode]="GetMode('registration')">Registro</hack-button>
+      <hack-button
+        icon="team"
+        [mode]="GetMode('registration')"
+        (Click)="RequestPage('registration')"
+        >Registro</hack-button
+      >
     </li>
     <li>
-      <hack-button icon="star" [mode]="GetMode('sponsors')">Patrocinadores</hack-button>
+      <hack-button icon="star" [mode]="GetMode('sponsors')" (Click)="RequestPage('sponsors')"
+        >Patrocinadores</hack-button
+      >
     </li>
     <li>
-      <hack-button icon="institution" [mode]="GetMode('comitee')">Comite</hack-button>
+      <hack-button icon="institution" [mode]="GetMode('comitee')" (Click)="RequestPage('comitee')"
+        >Comite</hack-button
+      >
     </li>
   </ul>
 </header>

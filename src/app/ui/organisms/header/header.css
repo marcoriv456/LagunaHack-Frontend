@@ -18,7 +18,9 @@ ul {
 }
 
 hack-button {
+  position: relative;
   --btn-color: var(--white);
+  z-index: 100;
 }
 
 hack-button[mode='clear'] {

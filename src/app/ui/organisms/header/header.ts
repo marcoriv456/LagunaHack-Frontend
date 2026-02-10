@@ -1,5 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { EventBus } from '../../../core/events/event-bus/event-bus';
+import { PageChangeRequestEvent } from '../../../core/events/page-change-request.event';
 import { PageChangeEvent } from '../../../core/events/page-change.event';
 import { Button } from '../../atoms/button/button';
 
@@ -20,5 +21,9 @@ export class Header implements OnInit {
   }
   protected GetMode(page: string) {
     return this._actualPage == page ? 'clear' : 'transparent';
+  }
+
+  protected RequestPage(page: string) {
+    this._eventBus.emit(new PageChangeRequestEvent(page));
   }
 }

@@ -37,6 +37,7 @@ hack-gallery {
 section:not(.intersected) :is(p, h3, hack-gallery) {
   translate: 0 -20%;
   opacity: 0;
+  pointer-events: none;
 }
 
 p,
