@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Campus } from '../../../../../../core/domain/model/campus';
+import { Category } from '../../../../../../core/domain/model/category';
 import { Student } from '../../../../../../core/domain/model/student';
 import { Team } from '../../../../../../core/domain/model/team';
-import { IconedLabeledValue } from '../../../../../../core/utilities/labeled-value';
+import { LabeledValue } from '../../../../../../core/utilities/labeled-value';
 import { Button } from '../../../../../atoms/button/button';
 import { LabeledText } from '../../../../../atoms/labeled-text/labeled-text';
 import { Select } from '../../../../../atoms/select/select';
@@ -38,11 +38,11 @@ export class TeamInfoForm implements OnInit {
 
   protected _team = new Team();
 
-  protected readonly _campusOptions: IconedLabeledValue<Campus, 'institution'>[] = [
-    { icon: 'institution', label: 'Zongolica', value: Campus.ZONGOLICA },
-    { icon: 'institution', label: 'Nogales', value: Campus.NOGALES },
-    { icon: 'institution', label: 'Cuichoapa', value: Campus.CUICHOAPA },
-    { icon: 'institution', label: 'Tequila', value: Campus.TEQUILA },
+  protected readonly _categoryOptions: LabeledValue<Category>[] = [
+    { icon: 'agriculture', label: 'Agricultura', value: Category.AGRICULTURA },
+    { icon: 'science', label: 'Ciencias', value: Category.CIENCIAS },
+    { icon: 'humanities', label: 'Humanismo', value: Category.HUMANISMO },
+    { icon: 'health', label: 'Salud', value: Category.SALUD },
   ];
 
   protected _logTeam() {

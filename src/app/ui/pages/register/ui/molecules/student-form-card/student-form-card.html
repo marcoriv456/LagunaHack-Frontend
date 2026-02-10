@@ -7,6 +7,23 @@
       Placeholder="Nombre completo"
     />
   </hack-input-label>
+  <div class="row career-semester">
+    <hack-select
+      class="career"
+      [options]="_careerOptions"
+      [removeDefault]="true"
+      default="null"
+      [showIcons]="true"
+    />
+
+    <hack-select
+      class="campus"
+      [options]="_campusOptions"
+      [removeDefault]="true"
+      default="null"
+      [showIcons]="true"
+    />
+  </div>
   <div class="row">
     <hack-select
       [options]="_semesterOptions"
@@ -25,4 +42,10 @@
       />
     </hack-input-label>
   </div>
+  <div class="row">
+    <hack-input-label icon="mail">
+      <hack-text-input Placeholder="Correo institucional" />
+    </hack-input-label>
+  </div>
+  <!-- <hack-text-input Placeholder="Carrera" /> -->
 </hack-panel>

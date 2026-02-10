@@ -26,17 +26,24 @@ hack-input-label {
 
 .row * {
   height: 2.75rem;
-  --select-height: 2.75rem;
   flex: 1 1 0;
 }
-
-.semester {
-  flex: 3 1 0;
+hack-select {
+  --select-height: 2.75rem;
 }
-
-.control-number {
+:host :is(.career) {
+  flex: 4 1 0;
+}
+:host :is(.campus) {
   flex: 5 1 0;
 }
+/* .semester { */
+/*   flex: 3 1 0; */
+/* } */
+/**/
+/* .control-number { */
+/*   flex: 5 1 0; */
+/* } */
 
 .name,
 .name hack-text-input {

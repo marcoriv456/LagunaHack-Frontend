@@ -60,21 +60,20 @@ export class Select implements ControlValueAccessor, OnInit {
   }
 
   ngOnInit() {
-    console.log(this.default);
     this.defaultAsOption = this.getOption(this.default) || this.fallbackDefaultOption;
-    console.log(this.defaultAsOption);
     this.selected = this.defaultAsOption;
     if (!this.removeDefault) this.options.push(this.defaultAsOption);
     this.sortOptions();
     this.optionsCount = this.options.length;
+    if (this.default) this.optionsCount--;
     this.displayIcons = this.showIcons ? 'block' : 'none';
   }
 
   protected onSelect(selection: any) {
-    if (this.removeDefault && this.selected.value == this.default) {
-      this.options = this.options.filter((o) => o.value != this.default);
-      this.optionsCount--;
-    }
+    // if (this.removeDefault && this.selected.value == this.default) {
+    //   this.options = this.options.filter((o) => o.value != this.default);
+    //   this.optionsCount--;
+    // }
     this.writeValue(selection);
     this.onChange(selection);
     this.onTouched();
@@ -87,7 +86,9 @@ export class Select implements ControlValueAccessor, OnInit {
   }
 
   private sortOptions() {
-    this.sortedOptions = this.options.sort((a, b) => (a === this.selected ? -1 : 1));
+    this.sortedOptions = this.options
+      .filter((a) => a.value !== this.default)
+      .sort((a, b) => (a === this.selected ? -1 : 1));
   }
 
   private getOption(value: any) {

@@ -2,7 +2,7 @@
   display: block;
   --select-height: 3.75rem;
   --select-options-count: 1;
-  --select-color: var(--main);
+  --select-color: var(--opaque);
   --select-border-color: var(--light);
   height: var(--select-height);
 }
