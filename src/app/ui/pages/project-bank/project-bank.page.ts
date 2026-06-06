@@ -8,11 +8,12 @@ import { Panel } from '../../atoms/panel/panel';
 import { Text } from '../../atoms/text/text';
 import { Title } from '../../atoms/title/title';
 import { Intersectable } from '../../directives/intersectable/intersectable';
+import { PageLink } from '../../directives/page-link/page-link';
 import { DevAdvice } from '../../molecules/dev-advice/dev-advice';
 
 @Component({
   selector: 'hack-project-bank',
-  imports: [Title, Text, Button, Panel, Intersectable, DevAdvice],
+  imports: [Title, Text, Button, Panel, Intersectable, DevAdvice, PageLink],
   templateUrl: './project-bank.page.html',
   styleUrl: './project-bank.page.css',
 })

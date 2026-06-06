@@ -12,10 +12,26 @@
   <nav>
     <ul>
       <li>
-        <hack-button icon="team" mode="dark">Registra a tu equipo</hack-button>
+        <hack-button
+          icon="team"
+          mode="dark"
+          hackPageLink
+          Page="registration"
+          #link="PageLinkRef"
+          (Click)="link.Go()"
+          >Registra a tu equipo</hack-button
+        >
       </li>
       <li>
-        <hack-button icon="light-bulb" mode="outlined">Ver Proyectos</hack-button>
+        <hack-button
+          icon="light-bulb"
+          mode="outlined"
+          hackPageLink
+          Page="project-bank"
+          #link2="PageLinkRef"
+          (Click)="link2.Go()"
+          >Ver Proyectos</hack-button
+        >
       </li>
     </ul>
   </nav>

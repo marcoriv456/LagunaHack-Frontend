@@ -6,11 +6,12 @@ import { Panel } from '../../atoms/panel/panel';
 import { Text } from '../../atoms/text/text';
 import { Title } from '../../atoms/title/title';
 import { Intersectable } from '../../directives/intersectable/intersectable';
+import { PageLink } from '../../directives/page-link/page-link';
 import { TeamInfoForm } from './ui/organisms/team-info-form/team-info-form';
 
 @Component({
   selector: 'hack-register',
-  imports: [Title, Text, Button, Panel, LabeledSubtitle, TeamInfoForm, Intersectable],
+  imports: [Title, Text, Button, Panel, LabeledSubtitle, TeamInfoForm, Intersectable, PageLink],
   templateUrl: './register.page.html',
   styleUrl: './register.page.css',
 })

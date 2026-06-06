@@ -4,10 +4,11 @@ import { HomeIntersectionEvent } from '../../../core/events/home-intersection.ev
 import { Button } from '../../atoms/button/button';
 import { Text } from '../../atoms/text/text';
 import { Intersectable } from '../../directives/intersectable/intersectable';
+import { PageLink } from '../../directives/page-link/page-link';
 
 @Component({
   selector: 'hack-home',
-  imports: [Text, Button, Intersectable],
+  imports: [Text, Button, Intersectable, PageLink],
   templateUrl: './home.page.html',
   styleUrl: './home.page.css',
 })
